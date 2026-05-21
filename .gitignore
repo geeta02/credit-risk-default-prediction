@@ -1,0 +1,24 @@
+# Data files
+data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+
+# MLflow
+mlruns/
+*.db
+
+# Large model files
+models/shap_explainer.pkl
+
+# Mac
+.DS_Store
