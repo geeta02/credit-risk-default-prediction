@@ -52,34 +52,6 @@ TARGET = 0 → Client repaid the loan
 
 ---
 
-## 📁 Project Structure
-
-```
-credit-risk-default-prediction/
-│
-├── app/
-│   ├── main.py                     # FastAPI application — 4 endpoints
-│   ├── model.py                    # Model loading + inference logic
-│   ├── schemas.py                  # Pydantic request/response schemas
-│   ├── feature_metadata.json       # Feature names + training medians
-│   └── model_artifacts/
-│       └── xgboost_model.json      # Trained XGBoost model
-│
-├── notebooks/
-│   ├── 01_EDA.ipynb                # Exploratory data analysis
-│   ├── 02_feature_engineering.ipynb # Feature engineering pipeline
-│   ├── 03_model_training.ipynb     # XGBoost training + evaluation
-│   ├── 04_shap_analysis.ipynb      # SHAP global + local explanations
-│   └── 05_mlflow_tracking.ipynb    # MLflow experiment logging
-│
-├── Dockerfile                      # Container build instructions
-├── docker-compose.yml              # Service orchestration
-├── requirements.txt                # Production dependencies
-└── README.md
-```
-
----
-
 
 ## 📦 Dataset
 
@@ -88,14 +60,4 @@ credit-risk-default-prediction/
 - **Raw features:** 122
 - **Engineered features:** 190
 - **Default rate:** 8.1%
-
----
-
-## 🏗️ MLflow Experiment Tracking
-
-All experiments tracked locally using MLflow:
-- Hyperparameters logged per run
-- Metrics (ROC-AUC, PR-AUC, KS Stat) logged per run
-- SHAP plots saved as artifacts
-- Best model registered as `credit_risk_xgboost v1`
 
